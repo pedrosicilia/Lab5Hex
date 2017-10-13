@@ -12,51 +12,50 @@ public class main {
 //     System.out.println("Test 1:");
         System.out.println("Enter: " +args[0]+ "");
         System.out.println("Enter: ");
-        userinput = scan.nextLine();
-           userinput = userinput.toUpperCase();
+      //  userinput = scan.nextLine();
+       //    userinput = userinput.toUpperCase();
 
-            char[] charArray = userinput.toCharArray();
+            char[] charArray = args[0].toCharArray();
 
-            String compare0x = "0X";
+            String compare0x = "0x";
 
+            args[0] = args[0].toUpperCase();
 
-           args[0] = args[0].toUpperCase();
             if(args[0].substring(0,2).equals(compare0x))
             {
                 args[0] = args[0].substring(2);
                 System.out.println( "W/O the two chars: " +args[0]+ "");
             }
 
-        while (count < userinput.length()) {
+            System.out.println(" LeNGTH: " +args[0].length()+ " Displaying: " +args[0]+ "");
+
+
+        while (count < args[0].length()) {
             char hex;
-            hex = userinput.charAt(count);
+            hex = args[0].charAt(count);
             charArray[count] = hex;
 
             System.out.println("Word/Num: " +count+ "" +charArray[count]+ "");
             count++;
         }
-            char test = 'A';
-            int num = 0;
-            num = test - 55 ;
-
-            System.out.println("TESTCHAR:  " +num+ "");
 
             double decimal = 0;
-            double arraylength = charArray.length;
-            double tempdec = 0;
+            double arraylength;
 
             int charvert = 0;
 
-System.out.println(" LeNGTH: " +arraylength+"");
+            arraylength = charArray.length;
+
+
+            System.out.println(" LeNGTH: " +arraylength+" Displaying: ");
 
         for(int i = 0; i < charArray.length; i++) {
             arraylength--;
            // decimal = Math.pow(16, arraylength);
 
             if(charArray[i] > 58) {
-                if(charArray[i] == 'A') {
+                if(charArray[i] == 'A')
                     charvert = 10;
-                }
                 else if(charArray[i] == 'B')
                     charvert = 11;
                 else if(charArray[i] == 'C')
@@ -86,7 +85,7 @@ System.out.println(" LeNGTH: " +arraylength+"");
             tempdec = decimal + tempdec;
 */
 
-                System.out.println("Char value: "+charArray[i]+ " Position: " +arraylength+ "  DECIMAL: " +decimal+ " TEMPDEC" +tempdec+ "");
+                System.out.println("Char value: "+charArray[i]+ " Position: " +arraylength+ "  DECIMAL: " +decimal+ " TEMPDEC: 0" );
 
 
 
