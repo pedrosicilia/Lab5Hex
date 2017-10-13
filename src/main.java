@@ -1,11 +1,6 @@
-import sun.plugin2.message.Conversation;
-
-import java.util.Scanner;
-
-
 public class main {
 
-    public static int conversion(String converting) {
+    public static long conversion(String converting) {
 
         int count = 0;
 
@@ -59,8 +54,7 @@ public class main {
             }
         }
 
-        System.out.println( "\n" +decimal+ "");
-        return (int) decimal;
+        return (long) decimal;
 
     }
 
@@ -68,9 +62,11 @@ public class main {
         public static void main(String args[]) {
 
             String hexdecimal;
+            long converteddec;
             System.out.print("java Main " +args[0]);
             hexdecimal = args[0];
-            conversion(hexdecimal);
+           converteddec = conversion(hexdecimal);
+            System.out.println( "\n" +converteddec+ "");
 
 
     }
