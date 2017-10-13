@@ -59,7 +59,6 @@ public class main {
             }
         }
 
-        Double.parseDouble("");
         System.out.println( "\n" +decimal+ "");
         return (int) decimal;
 
