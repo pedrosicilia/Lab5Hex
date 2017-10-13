@@ -5,22 +5,21 @@ import java.util.Scanner;
 
 public class main {
 
-    public static int conversion(String[] args) {
+    public static int conversion(String converting) {
 
         int count = 0;
 
-        System.out.println("Enter: " +args[0]+ "");
-        char[] charArray = args[0].toCharArray();
+        char[] charArray = converting.toCharArray();
         String compare0x = "0x";
-        args[0] = args[0].toUpperCase();
-        if(args[0].substring(0,2).equals(compare0x))
+        converting = converting.toUpperCase();
+        if(converting.substring(0,2).equals(compare0x))
         {
-            args[0] = args[0].substring(2);
+            converting = converting.substring(2);
         }
 
-        while (count < args[0].length()) {
+        while (count < converting.length()) {
             char hex;
-            hex = args[0].charAt(count);
+            hex = converting.charAt(count);
             charArray[count] = hex;
             count++;
         }
@@ -60,7 +59,8 @@ public class main {
             }
         }
 
-        System.out.println( "Converted: " +decimal+ "");
+        Double.parseDouble("");
+        System.out.println( "\n" +decimal+ "");
         return (int) decimal;
 
     }
@@ -69,6 +69,7 @@ public class main {
         public static void main(String args[]) {
 
             String hexdecimal;
+            System.out.print("java Main " +args[0]);
             hexdecimal = args[0];
             conversion(hexdecimal);
 
