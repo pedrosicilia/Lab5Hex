@@ -61,14 +61,11 @@ public class main {
 
         public static void main(String args[]) {
 
-            String hexdecimal;
-            long converteddec;
-            System.out.print("java Main " +args[0]);
-            hexdecimal = args[0];
-           converteddec = conversion(hexdecimal);
-            System.out.println( "\n" +converteddec+ "");
+            System.out.println(conversion(args[0]));
 
 
     }
 
 }
+
+
