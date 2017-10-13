@@ -35,8 +35,11 @@ public class main {
             System.out.println("Word/Num: " +count+ "" +charArray[count]+ "");
             count++;
         }
+            char test = 'A';
+            int num = 0;
+            num = test - 55 ;
 
-
+            System.out.println("TESTCHAR:  " +num+ "");
 
             double decimal = 0;
             double arraylength = charArray.length;
@@ -50,27 +53,33 @@ System.out.println(" LeNGTH: " +arraylength+"");
             arraylength--;
            // decimal = Math.pow(16, arraylength);
 
+            if(charArray[i] > 58) {
                 if(charArray[i] == 'A') {
-                    decimal = decimal * 10;
+                    charvert = 10;
                 }
                 else if(charArray[i] == 'B')
-                    decimal = decimal * 11;
+                    charvert = 11;
                 else if(charArray[i] == 'C')
-                    decimal = decimal * 12;
+                    charvert = 12;
                 else if(charArray[i] == 'D' )
-                    decimal = decimal * 13;
+                    charvert = 13;
                 else if(charArray[i] == 'E')
-                    decimal = decimal * 14;
+                    charvert = 14;
                 else if(charArray[i] == 'F')
-                    decimal = decimal * 15;
+                    charvert = 15;
+
+                decimal = Math.pow(16, arraylength) * charvert + decimal;
+            }
+            else{
+                charvert = (charArray[i] - '0');
+                decimal = Math.pow(16, arraylength) * charvert + decimal;
 
 
+            }
               //  charArray[i] = (char) (charArray[i] - 55);
-            charvert = (int)(charArray[i] - '0');
             System.out.println( "Charverted: " +charvert+ "");
 
-            decimal = Math.pow(16, arraylength) * charvert + decimal;
-
+            //    tempdec = charArray[i] - '7';
 /*
             decimal = decimal * charvert;
 
@@ -85,6 +94,7 @@ System.out.println(" LeNGTH: " +arraylength+"");
 
         System.out.println( "Converted: " +decimal+ "");
 
+        /*
 
         int test;
         char a = 'A';
@@ -95,7 +105,7 @@ System.out.println(" LeNGTH: " +arraylength+"");
 
 
 
-
+*/
 
 
 
